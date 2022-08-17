@@ -1,5 +1,6 @@
-import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView } from 'react-native';
+
+import { photoListStyles } from '../assets/styles';
 import PhotoCard from './PhotoCard';
 
 const bsPhotos = [
@@ -10,19 +11,10 @@ const bsPhotos = [
 
 const PhotoList = () => {
     return (
-        <ScrollView style={styles.PhotoList}>
+        <ScrollView style={photoListStyles.photoList}>
             {bsPhotos.map((photo, index) => (<PhotoCard key={index} photo={photo}/>))}
         </ScrollView>
     );
 }
-
-const styles = StyleSheet.create({
-    PhotoList: {
-        flex: 1,
-        backgroundColor: '#E8E8E8',
-        paddingVertical: 10,
-        paddingHorizontal: 12
-    }
-});
 
 export default PhotoList;

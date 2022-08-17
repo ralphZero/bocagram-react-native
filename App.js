@@ -1,12 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native';
 import AppBar from './components/AppBar';
 import PhotoList from './components/PhotoList';
+import Login from './screens/Login';
 
 export default function App() {
   return (
       <SafeAreaView style={styles.safeArea}>
         <AppBar />
+        <Login />
         <PhotoList />
       </SafeAreaView>
   );
