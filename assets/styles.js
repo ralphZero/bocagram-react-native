@@ -1,14 +1,18 @@
 import { StyleSheet, Platform, StatusBar } from 'react-native';
 
-export const loginStyles = StyleSheet.create({
+export const appBarStyles = StyleSheet.create({
     appBar: {
         paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-
-    }, appBarTitle: {
-        fontSize: 20,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingHorizontal: 12,
+        backgroundColor: '#FFFFFF',
+    }, 
+    appBarTitle: {
+        fontSize: 30,
         fontWeight: '800',
-        paddingVertical: 18,
-        paddingHorizontal: 12
+        paddingVertical: 12
     }
 });
 
@@ -54,6 +58,12 @@ export const photoCardStyles = StyleSheet.create({
     },
     likesCount: {
         fontWeight: '800'
+    },
+    icons: {
+        flex: 1,
+        flexDirection: 'row',
+        paddingTop: 3,
+        paddingBottom: 8,
     }
 });
 
@@ -62,5 +72,25 @@ export const photoListStyles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#E8E8E8',
         paddingVertical: 5,
+    }
+});
+
+export const loginStyles = StyleSheet.create({
+    container: {
+        flex: 1,
+        height: '100%',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#FFFFFF'
+    },
+    brand: {
+        fontSize: 32,
+        fontWeight: '800',
+        paddingVertical: 18,
+        marginBottom: 82
+    },
+    cta : {
+        width: '90%',
     }
 });
